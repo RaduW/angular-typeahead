@@ -1,7 +1,9 @@
-angular.module('siyfion.sfTypeahead', [])
-  .directive('sfTypeahead', function () {
+angular.module('typeahead-module', [])
+  .directive('typeahead', function () {
+    "use strict";
     return {
-      restrict: 'AC',       // Only apply on an attribute or class
+      restrict: 'E',       // Only apply on an attribute or class
+      require: '^?bootstrapTagsinput',
       scope: {
         value: '=ngModel',  // The two-way data bound value that is returned by the directive
         options: '=',       // The typeahead configuration options (https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md#options)
